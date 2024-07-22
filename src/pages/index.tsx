@@ -31,13 +31,42 @@ export default function Home() {
           <div className="bio mb-4 md:w-1/2">
             <h1 className="mb-5 text-5xl font-bold">Agus Setiawan</h1>
             <p className="mb-5">I'm Web Developer from Indonesia.</p>
+            <p className="mb-5">
+              <em>Specialized in JavaScript, ReactJS, and NodeJS</em>
+            </p>
             <div className="sosialmedia flex gap-4">
-              <FaLinkedinIn />
-              <RiInstagramFill />
-              <FaMedium />
-              <FaGithub />
+              <Link
+                href="https://www.linkedin.com/in/agus-setiawan-50657a266"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </Link>
+              <Link
+                href="https://www.instagram.com/your-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <RiInstagramFill />
+              </Link>
+              <Link
+                href="https://medium.com/@agussetiawanbelajar"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaMedium />
+              </Link>
+              <Link
+                href="https://github.com/Agus27111"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </Link>
             </div>
-            <button className="btn glass mt-3">Contact Me</button>
+            <button href="/contact" className="btn glass mt-3">
+              Contact Me
+            </button>
           </div>
           <div className="navigation md:w-1/2">
             {navig.map((e) => (

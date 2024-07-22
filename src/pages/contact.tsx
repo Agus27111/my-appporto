@@ -1,8 +1,4 @@
 import { Inter } from "next/font/google";
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
-import { FaMedium } from "react-icons/fa6";
-import Link from "next/link";
 import { useState } from "react";
 import BottomNav from "../components/BottomNav";
 const inter = Inter({ subsets: ["latin"] });
@@ -76,3 +72,4 @@ export default function Contact() {
     </div>
   );
 }
+ 

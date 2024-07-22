@@ -65,15 +65,21 @@ export default function Biography() {
       >
         <div className="w-[80%] h-[90%] flex flex-col md:flex-row md:gap-4 md:justify-center md:items-center">
           <div className="bio mb-4 md:w-full">
-            <h1 className="mb-5 text-5xl font-bold">Agus Setiawan</h1>
-            <p className="mb-5">I'm a Web Developer from Indonesia.</p>
-            <div className="sosialmedia flex gap-4">
-              <FaLinkedinIn />
-              <RiInstagramFill />
-              <FaMedium />
-              <FaGithub />
-            </div>
-            <button className="btn glass mt-3">Contact Me</button>
+            
+
+            <section style={{ marginBottom: "50px" }}>
+              <h2>About Me</h2>
+              <p>
+                Hi, I'm Agus Setiawan. I'm a Fullstack Developer proficient in
+                HTML, CSS (Bootstrap and TailwindCSS), JavaScript, NodeJS,
+                Express, PostgreSQL, Prisma, Sequelize, Framer-Motion, Daisy UI,
+                ReactJS, and NextJS.
+              </p>
+              <p>
+                I have experience in building various applications including
+                e-commerce platforms, landing pages, and more.
+              </p>
+            </section>
           </div>
         </div>
       </div>
