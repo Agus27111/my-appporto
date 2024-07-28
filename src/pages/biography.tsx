@@ -24,7 +24,7 @@ import {
 } from "react-icons/si";
 import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
-import BottomNav from "../components/BottomNav";
+import Drawer from "../components/Drawer";
 
 export default function Biography() {
   const techStackIcons = [
@@ -45,7 +45,7 @@ export default function Biography() {
 
   return (
     <div
-      className="hero h-screen"
+      className="hero h-screen overflow-hidden"
       style={{
         backgroundImage: "url(/heroit.webp)",
         backgroundSize: "cover",
@@ -53,7 +53,7 @@ export default function Biography() {
     >
       <div className="hero-overlay bg-opacity-60 text-center"></div>
       <div
-        className="hero-content text-neutral-content w-[80%] h-[80%]"
+        className="hero-content text-neutral-content w-[80%] h-[80%] flex flex-col justify-center items-center overflow-hidden"
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.1)",
           borderRadius: "16px",
@@ -64,20 +64,30 @@ export default function Biography() {
         }}
       >
         <div className="w-[80%] h-[90%] flex flex-col md:flex-row md:gap-4 md:justify-center md:items-center">
-          <div className="bio mb-4 md:w-full">
-            
-
-            <section style={{ marginBottom: "50px" }}>
-              <h2>About Me</h2>
+          <div className="bio mb-4 md:w-full flex flex-col justify-center align-center">
+            <section
+              style={{ marginBottom: "50px" }}
+              className="flex flex-col gap-4 overflow-hidden justify-center align-center"
+            >
               <p>
-                Hi, I'm Agus Setiawan. I'm a Fullstack Developer proficient in
-                HTML, CSS (Bootstrap and TailwindCSS), JavaScript, NodeJS,
-                Express, PostgreSQL, Prisma, Sequelize, Framer-Motion, Daisy UI,
-                ReactJS, and NextJS.
+                <span className="text-5xl">Hi</span> there! I'm AgusSe, a
+                Fullstack Developer with a passion for creating dynamic and
+                responsive web applications.
               </p>
-              <p>
-                I have experience in building various applications including
-                e-commerce platforms, landing pages, and more.
+
+              <p className='hidden md:block'>
+                My toolkit includes HTML, CSS (Bootstrap and TailwindCSS), and
+                JavaScript, along with powerful backend technologies like
+                NodeJS, Express, and PostgreSQL. I'm also skilled in Prisma,
+                Sequelize, and MongoDB for database management, and I bring
+                interactive user experiences to life with Framer-Motion and
+                Daisy UI. On the frontend, I excel with ReactJS and NextJS.
+              </p>
+              <p className='hidden md:block'>
+                Over the years, I've worked on a variety of projects ranging
+                from e-commerce platforms to sleek landing pages. My goal is to
+                blend creativity with technical expertise to build solutions
+                that are not only functional but also visually appealing.
               </p>
             </section>
           </div>
@@ -106,6 +116,7 @@ export default function Biography() {
       <style jsx>{`
         .infinite-scroll {
           position: relative;
+          height: 100vh;
         }
         .animate-scroll {
           animation: scroll 15s linear infinite;
@@ -119,7 +130,9 @@ export default function Biography() {
           }
         }
       `}</style>
-      <BottomNav className="hidden sm:block" />
+      <div className="absolute md:w-1/8 right-2">
+        <Drawer />
+      </div>
     </div>
   );
 }

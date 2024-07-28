@@ -1,14 +1,15 @@
 import { Inter } from "next/font/google";
 import { useState } from "react";
-import BottomNav from "../components/BottomNav";
+import Drawer from "../components/Drawer";
+import Footer from "../components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Contact() {
   const navig = ["biography", "portfolio", "contact"];
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,37 +40,42 @@ export default function Contact() {
           <div className="contact-form mb-4 md:w-1/2">
             <h1 className="mb-5 text-5xl font-bold">Contact Me</h1>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              <input 
-                type="text" 
-                placeholder="Your Name" 
-                className="input input-bordered w-full" 
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="input input-bordered w-full"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                required 
+                required
               />
-              <input 
-                type="email" 
-                placeholder="Your Email" 
-                className="input input-bordered w-full" 
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="input input-bordered w-full"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                required 
+                required
               />
-              <textarea 
-                placeholder="Your Message" 
-                className="textarea textarea-bordered w-full h-1/2" 
+              <textarea
+                placeholder="Your Message"
+                className="textarea textarea-bordered w-full h-1/2"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                required 
+                required
               ></textarea>
-              <button type="submit" className="btn glass mt-3">Send Message</button>
+              <button type="submit" className="btn glass mt-3">
+                Send Message
+              </button>
             </form>
           </div>
-          
         </div>
       </div>
-      <BottomNav />
+      <div className="absolute right-0 top-10 z-20 ">
+        <Drawer />
+      </div>
+      <div className="absolute  bottom-0 z-20 ">
+        <Footer />
+      </div>
     </div>
   );
 }
- 
