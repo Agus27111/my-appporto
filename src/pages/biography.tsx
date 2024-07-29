@@ -64,18 +64,18 @@ export default function Biography() {
         }}
       >
         <div className="w-[80%] h-[90%] flex flex-col md:flex-row md:gap-4 md:justify-center md:items-center">
-          <div className="bio mb-4 md:w-full flex flex-col justify-center align-center">
+          <div className="bio mb-4 md:w-full flex flex-col justify-center items-center h-full md:h-auto">
             <section
               style={{ marginBottom: "50px" }}
-              className="flex flex-col gap-4 overflow-hidden justify-center align-center"
+              className="flex flex-col gap-4 overflow-hidden justify-center items-center h-full md:h-auto"
             >
-              <p>
-                <span className="text-5xl">Hi</span> there! I'm AgusSe, a
+              <p className="flex justify-center items-center h-full md:h-auto">
+                <span className="text-5xl mr-2">Hi</span> I'm Agus Setiawan,  a
                 Fullstack Developer with a passion for creating dynamic and
                 responsive web applications.
               </p>
 
-              <p className='hidden md:block'>
+              <p className="hidden md:block">
                 My toolkit includes HTML, CSS (Bootstrap and TailwindCSS), and
                 JavaScript, along with powerful backend technologies like
                 NodeJS, Express, and PostgreSQL. I'm also skilled in Prisma,
@@ -83,7 +83,7 @@ export default function Biography() {
                 interactive user experiences to life with Framer-Motion and
                 Daisy UI. On the frontend, I excel with ReactJS and NextJS.
               </p>
-              <p className='hidden md:block'>
+              <p className="hidden md:block">
                 Over the years, I've worked on a variety of projects ranging
                 from e-commerce platforms to sleek landing pages. My goal is to
                 blend creativity with technical expertise to build solutions

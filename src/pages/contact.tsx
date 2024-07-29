@@ -11,7 +11,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     window.location.href = `mailto:agussetiawanbelajar@gmail.com?subject=Contact from ${name}&body=${message} (${email})`;
   };
@@ -70,7 +70,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div className="absolute right-0 top-10 z-20 ">
+      <div className="absolute right-2 top-10 z-20 ">
         <Drawer />
       </div>
       <div className="absolute  bottom-0 z-20 ">

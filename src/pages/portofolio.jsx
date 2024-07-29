@@ -24,18 +24,18 @@ export default function Portofolio() {
 
       {/* sesi showoff my porto */}
       <div className="content md:h-screen h-auto w-screen flex flex-col md:flex-row justify-between align-center md:mt-20 md:p-10 p-2">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10">
+        <div className="flex flex-col md:flex-row  w-screen justify-center items-center gap-10">
           <>
             {/* Card Left */}
-            <div className="md:w-full w-[100%] flex flex-col justify-center items-center mx-auto text-center">
+            <div className=" w-[80%] flex flex-col justify-center items-center mx-auto text-center">
               {/* Accordion */}
               <div
-                className="collapse collapse-plus bg-base-200 mb-2"
+                className="collapse collapse-plus bg-base-200 mb-2 w-full"
                 onClick={() => handleAccordionClick(0)}
               >
                 <input type="radio" name="my-accordion-3" defaultChecked />
                 <div className="collapse-title text-xl font-medium">
-                  Click to open this one and close others
+                  Website News
                 </div>
                 <div className="collapse-content">
                   <div className="card bg-base-100 w-[90%] md:w-96 shadow-xl">
@@ -47,13 +47,13 @@ export default function Portofolio() {
                     </figure>
                     <div className="card-body ">
                       <h2 className="card-title">
-                        Shoes!
-                        <div className="badge badge-secondary">NEW</div>
+                        every day is good news!
+                        
                       </h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>we make it with:</p>
                       <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
+                        <div className="badge badge-outline">ReactJS</div>
+                        <div className="badge badge-outline">CSS</div>
                       </div>
                     </div>
                   </div>
@@ -66,7 +66,7 @@ export default function Portofolio() {
               >
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
-                  Click to open this one and close others
+                  Daftar Belanjaan Ku
                 </div>
                 <div className="collapse-content">
                   <div className="card bg-base-100  w-[90%] md:w-96 shadow-xl">
@@ -78,13 +78,13 @@ export default function Portofolio() {
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title">
-                        Shoes!
-                        <div className="badge badge-secondary">NEW</div>
+                        Todos!
+                        
                       </h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>we make it with:</p>
                       <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
+                        <div className="badge badge-outline">ReactJS</div>
+                        
                       </div>
                     </div>
                   </div>
@@ -97,7 +97,7 @@ export default function Portofolio() {
               >
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
-                  Click to open this one and close others
+                  Calculate Age
                 </div>
                 <div className="collapse-content">
                   <div className="card bg-base-100  w-[90%] md:w-96 shadow-xl">
@@ -109,13 +109,13 @@ export default function Portofolio() {
                     </figure>
                     <div className="card-body">
                       <h2 className="card-title">
-                        Shoes!
-                        <div className="badge badge-secondary">NEW</div>
+                        Calculator!
+                        
                       </h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>we make it with:</p>
                       <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
+                        <div className="badge badge-outline">Vanilla Javascript</div>
+                        <div className="badge badge-outline">Html & CSS </div>
                       </div>
                     </div>
                   </div>
@@ -128,7 +128,7 @@ export default function Portofolio() {
               >
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
-                  Click to open this one and close others
+                  Project Satu
                 </div>
                 <div className="collapse-content">
                   <div className="card bg-base-100  w-[90%] md:w-96 shadow-xl">
@@ -143,7 +143,7 @@ export default function Portofolio() {
                         Shoes!
                         <div className="badge badge-secondary">NEW</div>
                       </h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>we make it with:</p>
                       <div className="card-actions justify-end">
                         <div className="badge badge-outline">Fashion</div>
                         <div className="badge badge-outline">Products</div>
@@ -159,7 +159,7 @@ export default function Portofolio() {
               >
                 <input type="radio" name="my-accordion-3" />
                 <div className="collapse-title text-xl font-medium">
-                  Click to open this one and close others
+                  Project Dua
                 </div>
                 <div className="collapse-content">
                   <div className="card bg-base-100  w-[90%] md:w-96 shadow-xl">
@@ -174,7 +174,7 @@ export default function Portofolio() {
                         Shoes!
                         <div className="badge badge-secondary">NEW</div>
                       </h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <p>we make it with:</p>
                       <div className="card-actions justify-end">
                         <div className="badge badge-outline">Fashion</div>
                         <div className="badge badge-outline">Products</div>

@@ -1,8 +1,14 @@
 import React from "react";
 
-export default function Footer() {
+type FooterProps = {
+  className?: string;
+};
+
+const Footer: React.FC<FooterProps> = ({ className }) => {
   return (
-    <footer className="footer footer-center text-base-content p-4">
+    <footer
+      className={`footer footer-center text-base-content p-4 ${className}`}
+    >
       <aside>
         <p>
           Copyright © {new Date().getFullYear()} - All right reserved by
@@ -11,4 +17,6 @@ export default function Footer() {
       </aside>
     </footer>
   );
-}
+};
+
+export default Footer;
