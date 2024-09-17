@@ -5,248 +5,198 @@ import Drawer from "../components/Drawer";
 import Diff from "../components/Diff";
 
 export default function Portofolio() {
-  const carouselItemRefs = useRef([]);
-
-  const handleAccordionClick = (index) => {
-    const carouselItem = carouselItemRefs.current[index];
-    if (carouselItem) {
-      carouselItem.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   return (
-    <div className="container md:h-[300vh] h-auto w-screen">
-      <div className="absolute right-0 top-10 z-20 ">
+    <div className="mx-auto h-auto w-screen flex flex-col justify-center align-center">
+      {/* button kecil */}
+      <div className="absolute right-2 top-10 z-20 ">
         <Drawer />
       </div>
-      <div className="startPorto h-[50vh] md:h-screen w-screen md:p-10 p-2 md:mb-10 mb-2">
+      
+      {/* Welcome to my porto */}
+      <div className=" h-[50vh] md:h-screen w-screen flex flex-col justify-center align-center">
         <Diff />
-      </div>
+      </div> 
 
       {/* sesi showoff my porto */}
-      <div className="content md:h-screen h-auto w-screen flex flex-col md:flex-row justify-between align-center md:mt-20 md:p-10 p-2">
-        <div className="flex flex-col md:flex-row  w-screen justify-center items-center gap-10">
-          <>
-            {/* Card Left */}
-            <div className=" w-[80%] flex flex-col justify-center items-center mx-auto text-center">
-              {/* Accordion */}
-              <div
-                className="collapse collapse-plus bg-base-200 mb-2 w-full"
-                onClick={() => handleAccordionClick(0)}
-              >
-                <input type="radio" name="my-accordion-3" defaultChecked />
-                <div className="collapse-title text-xl font-medium">
-                  Website News
-                </div>
-                <div className="collapse-content">
-                  <div className="card bg-base-100 w-[90%] md:w-96 shadow-xl">
-                    <figure>
-                      <img
-                        src={`https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp`}
-                        alt="Shoes"
-                      />
-                    </figure>
-                    <div className="card-body ">
-                      <h2 className="card-title">
-                        every day is good news!
-                        
-                      </h2>
-                      <p>we make it with:</p>
-                      <div className="card-actions justify-end">
-                        <div className="badge badge-outline">ReactJS</div>
-                        <div className="badge badge-outline">CSS</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      <div className="content md:h-screen h-auto mt-10 mb-[25rem] ml-5 mr-5 ">
+        <div className="gallery-wrapper mx-auto">
+        <ul className="gallery mx-10">
+      {/* gambar1 */}
+      <li>
+        <figure>
+          <a href="#">
+            <img
+              src="images/gallery-1.jpg"
+              alt="Great Barrier Reef, Australia"
+            />
+          </a>
+          <figcaption>
+            <main>
+              <p className="small">9-day trip</p>
+              <h3>
+                Great Barrier Reef, <em>Australia</em>
+              </h3>
+              <p>
+                Dive into the vibrant underwater world of the Great Barrier
+                Reef, a UNESCO World Heritage Site teeming with marine life.
+              </p>
+            </main>
+            <footer>
+              <div>
+                <p className="small">From</p>
+                <p className="price">€2,500</p>
               </div>
-
-              <div
-                className="collapse collapse-plus bg-base-200 mb-2"
-                onClick={() => handleAccordionClick(1)}
-              >
-                <input type="radio" name="my-accordion-3" />
-                <div className="collapse-title text-xl font-medium">
-                  Daftar Belanjaan Ku
-                </div>
-                <div className="collapse-content">
-                  <div className="card bg-base-100  w-[90%] md:w-96 shadow-xl">
-                    <figure>
-                      <img
-                        src={`https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp`}
-                        alt="Shoes"
-                      />
-                    </figure>
-                    <div className="card-body">
-                      <h2 className="card-title">
-                        Todos!
-                        
-                      </h2>
-                      <p>we make it with:</p>
-                      <div className="card-actions justify-end">
-                        <div className="badge badge-outline">ReactJS</div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <img src="icons/icon-arrow-right-color.svg" alt="Icon" />
+            </footer>
+          </figcaption>
+        </figure>
+      </li>
+      {/* gambar2 */}
+      <li>
+        <figure>
+          <a href="#">
+            <img src="images/gallery-2.jpg" alt="Gallery image" />
+          </a>
+          <figcaption>
+            <main>
+              <p className="small">7-day trip</p>
+              <h3>
+                Grand Canyon, <em>United States</em>
+              </h3>
+              <p>
+                Stand in awe at the colossal beauty of the Grand Canyon, carved
+                by the forces of nature over millions of years.
+              </p>
+            </main>
+            <footer>
+              <div>
+                <p className="small">From</p>
+                <p className="price">€1,200</p>
               </div>
-
-              <div
-                className="collapse collapse-plus bg-base-200 mb-2"
-                onClick={() => handleAccordionClick(2)}
-              >
-                <input type="radio" name="my-accordion-3" />
-                <div className="collapse-title text-xl font-medium">
-                  Calculate Age
-                </div>
-                <div className="collapse-content">
-                  <div className="card bg-base-100  w-[90%] md:w-96 shadow-xl">
-                    <figure>
-                      <img
-                        src={`https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp`}
-                        alt="Shoes"
-                      />
-                    </figure>
-                    <div className="card-body">
-                      <h2 className="card-title">
-                        Calculator!
-                        
-                      </h2>
-                      <p>we make it with:</p>
-                      <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Vanilla Javascript</div>
-                        <div className="badge badge-outline">Html & CSS </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <img src="icons/icon-arrow-right-color.svg" alt="Icon" />
+            </footer>
+          </figcaption>
+        </figure>
+      </li>
+      {/* gambar3 */}
+      <li>
+        <figure>
+          <a href="#">
+            <img src="images/gallery-3.jpg" alt="Gallery image" />
+          </a>
+          <figcaption>
+            <main>
+              <p className="small">10-day trip</p>
+              <h3>
+                Machu Picchu, <em>Peru</em>
+              </h3>
+              <p>
+                Uncover the mystique of the ancient Inca ruins perched high in
+                the Andes Mountains at Machu Picchu.
+              </p>
+            </main>
+            <footer>
+              <div>
+                <p className="small">From</p>
+                <p className="price">€2,200</p>
               </div>
-
-              <div
-                className="collapse collapse-plus bg-base-200 mb-2"
-                onClick={() => handleAccordionClick(3)}
-              >
-                <input type="radio" name="my-accordion-3" />
-                <div className="collapse-title text-xl font-medium">
-                  Project Satu
-                </div>
-                <div className="collapse-content">
-                  <div className="card bg-base-100  w-[90%] md:w-96 shadow-xl">
-                    <figure>
-                      <img
-                        src={`https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp`}
-                        alt="Shoes"
-                      />
-                    </figure>
-                    <div className="card-body">
-                      <h2 className="card-title">
-                        Shoes!
-                        <div className="badge badge-secondary">NEW</div>
-                      </h2>
-                      <p>we make it with:</p>
-                      <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <img src="icons/icon-arrow-right-color.svg" alt="Icon" />
+            </footer>
+          </figcaption>
+        </figure>
+      </li>
+      {/* gambar4 */}
+      <li>
+        <figure>
+          <a href="#">
+            <img src="../../public/images/gallery-4.jpg" alt="Gallery image" />
+          </a>
+          <figcaption>
+            <main>
+              <p className="small">11-day trip</p>
+              <h3>
+                Bali, <em>Indonesia</em>
+              </h3>
+              <p>
+                Find tranquility on the idyllic island of Bali, with its lush
+                landscapes, serene temples, and warm hospitality.
+              </p>
+            </main>
+            <footer>
+              <div>
+                <p className="small">From</p>
+                <p className="price">€3,200</p>
               </div>
-
-              <div
-                className="collapse collapse-plus bg-base-200 mb-2"
-                onClick={() => handleAccordionClick(4)}
-              >
-                <input type="radio" name="my-accordion-3" />
-                <div className="collapse-title text-xl font-medium">
-                  Project Dua
-                </div>
-                <div className="collapse-content">
-                  <div className="card bg-base-100  w-[90%] md:w-96 shadow-xl">
-                    <figure>
-                      <img
-                        src={`https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp`}
-                        alt="Shoes"
-                      />
-                    </figure>
-                    <div className="card-body">
-                      <h2 className="card-title">
-                        Shoes!
-                        <div className="badge badge-secondary">NEW</div>
-                      </h2>
-                      <p>we make it with:</p>
-                      <div className="card-actions justify-end">
-                        <div className="badge badge-outline">Fashion</div>
-                        <div className="badge badge-outline">Products</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <img src="icons/icon-arrow-right-color.svg" alt="Icon" />
+            </footer>
+          </figcaption>
+        </figure>
+      </li>
+      {/* gambar5 */}
+      <li>
+        <figure>
+          <a href="#">
+            <img src="images/gallery-5.jpg" alt="Gallery image" />
+          </a>
+          <figcaption>
+            <main>
+              <p className="small">5-day trip</p>
+              <h3>
+                Rio de Janeiro, <em>Brazil</em>
+              </h3>
+              <p>
+                Experience the rhythm and energy of Rio de Janeiro, home to
+                vibrant Carnival celebrations, iconic landmarks, and stunning
+                beaches.
+              </p>
+            </main>
+            <footer>
+              <div>
+                <p className="small">From</p>
+                <p className="price">€1,600</p>
               </div>
-            </div>
-            {/* Card Right */}
-            <div className="w-full flex justify-center items-center md:h-[90%] h-[50vh] mt-4 ml-28 hidden md:block">
-              {/* Carousel Vertikal */}
-              <div className="carousel carousel-vertical rounded-box md:h-[90%] h-[50vh] md:w-auto w-[85%] mt-10  mockup-phone">
-                <div
-                  className="carousel-item h-full pt-5"
-                  ref={(el) => (carouselItemRefs.current[0] = el)}
-                >
-                  <img
-                    className="rounded-box p-2"
-                    src={`https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp`}
-                    alt="Carousel item"
-                  />
-                </div>
-                <div
-                  className="carousel-item h-full pt-5"
-                  ref={(el) => (carouselItemRefs.current[1] = el)}
-                >
-                  <img
-                    className="rounded-box p-2"
-                    src={`https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp`}
-                    alt="Carousel item"
-                  />
-                </div>
-                <div
-                  className="carousel-item h-full pt-5"
-                  ref={(el) => (carouselItemRefs.current[2] = el)}
-                >
-                  <img
-                    className="rounded-box p-2"
-                    src={`https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp`}
-                    alt="Carousel item"
-                  />
-                </div>
-                <div
-                  className="carousel-item h-full pt-5"
-                  ref={(el) => (carouselItemRefs.current[3] = el)}
-                >
-                  <img
-                    className="rounded-box p-2"
-                    src={`https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp`}
-                    alt="Carousel item"
-                  />
-                </div>
-                <div
-                  className="carousel-item h-full pt-5"
-                  ref={(el) => (carouselItemRefs.current[4] = el)}
-                >
-                  <img
-                    className="rounded-box p-2"
-                    src={`https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp`}
-                    alt="Carousel item"
-                  />
-                </div>
+              <img src="icons/icon-arrow-right-color.svg" alt="Icon" />
+            </footer>
+          </figcaption>
+        </figure>
+      </li>
+      {/* gambar6 */}
+      <li>
+        <figure>
+          <a href="#">
+            <img src="images/gallery-6.jpg" alt="Gallery image" />
+          </a>
+          <figcaption>
+            <main>
+              <p className="small">13-day trip</p>
+              <h3>
+                Niagara Falls, <em>Canada</em>
+              </h3>
+              <p>
+                Immerse yourself in the breathtaking cascades and embark on
+                unforgettable adventures in this natural wonder.
+              </p>
+            </main>
+            <footer>
+              <div>
+                <p className="small">From</p>
+                <p className="price">€3,000</p>
               </div>
-            </div>
-          </>
+              <img src="icons/icon-arrow-right-color.svg" alt="Icon" />
+            </footer>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
         </div>
       </div>
-      <div className="absolute right-8 ">
+
+      {/* button kecil */}
+      {/* <div className="absolute right-8 ">
         <Drawer />
       </div>
-      <div className="w-screen h-screen p-10 flex flex-col gap-16 items-center justify-center text-center">
+       */}
+       <div className="w-screen mt-10 p-10 flex flex-col gap-16 items-center justify-center text-center">
         <h1 className="text-8xl">Do you have a project?</h1>
         <div className="relative">
           <motion.svg

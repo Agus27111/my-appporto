@@ -63,7 +63,7 @@ export default function Contact() {
                 onChange={(e) => setMessage(e.target.value)}
                 required
               ></textarea>
-              <button type="submit" className="btn glass mt-3">
+              <button type="submit" className="btn btn-primary mt-3">
                 Send Message
               </button>
             </form>
