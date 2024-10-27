@@ -26,13 +26,13 @@ export default function drawer() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href='/Biography'>Biography</a>
+            <a href='/biography'>Biography</a>
           </li>
           <li>
-            <a href='/Portofolio'>Portfolio</a>
+            <a href='/portofolio'>Portfolio</a>
           </li>
           <li>
-            <a href='/Contact'>Contact Me</a>
+            <a href='/contact'>Contact Me</a>
           </li>
         </ul>
       </div>

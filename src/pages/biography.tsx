@@ -61,7 +61,7 @@ export default function Biography() {
         backgroundSize: "cover",
       }}
     >
-      <div className="hero-overlay bg-opacity-60 text-center"></div>
+      <div className="hero-overlay bg-opacity-60 text-center overflow-hidden"></div>
       <div
         className="hero-content text-neutral-content w-[82%] h-[80%] flex flex-col justify-center items-start overflow-hidden"
         style={{
@@ -144,6 +144,7 @@ export default function Biography() {
         }
         .animate-scroll {
           animation: scroll 15s linear infinite;
+          overflow: hidden;
         }
 
         /* Media query untuk tampilan mobile */

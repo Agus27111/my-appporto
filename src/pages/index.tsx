@@ -8,7 +8,7 @@ import React from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const navig = ["Biography", "Portofolio", "Contact"];
+  const navig = ["biography", "portofolio", "contact"];
   return (
     <div
       className="hero min-h-screen flex flex-col justify-center items-center" // Ganti min-h-full menjadi min-h-screen
@@ -30,7 +30,7 @@ export default function Home() {
           color: "rgba(0, 0, 0, 0.8)",
         }}
       >
-        <div className="w-full h-full flex flex-col md:flex-row md:gap-4 md:justify-center md:items-center flex-grow">
+        <div className="w-full h-full flex flex-col md:flex-row md:gap-4 md:justify-center md:items-center flex-grow p-5">
           <div className="bio mb-4 md:w-1/2">
             <h1 className="mb-5 text-5xl font-bold">Agus Setiawan</h1>
             <p className="mb-5">I'm a Backend Developer from Indonesia.</p>
@@ -67,7 +67,7 @@ export default function Home() {
                 <FaGithub className="hover:scale-125 transition-transform duration-300" />
               </Link>
             </div>
-            <Link href="/Contact" passHref>
+            <Link href="/contact" passHref>
               <button className="btn mt-5 hover:text-zinc-200">
                 Contact Me
               </button>
@@ -77,13 +77,15 @@ export default function Home() {
             {navig.map((e, index) => (
               <React.Fragment key={index}>
                 <div className="border-zinc-500 border-2 w-full h-[2px] mt-4 rounded-[5px]" />
-                <Link href={`/${e}`}>
+                <Link href={`/${e.toLowerCase()}`}>
+                  {" "}
                   <p className="mt-2 cursor-pointer hover:text-zinc-200 active:scale-[0.9] ">
-                    {e}
+                    {e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()}{" "}
                   </p>
                 </Link>
               </React.Fragment>
             ))}
+
             <div className="border-zinc-500 border-2 w-full mt-4 rounded-[5px]" />
           </div>
         </div>
