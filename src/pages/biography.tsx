@@ -18,9 +18,14 @@ import { FaMedium } from "react-icons/fa6";
 import {
   SiFramer,
   SiExpress,
-  SiSequelize,
-  SiPostgresql,
   SiMongodb,
+  SiMongoose,
+  SiSequelize,
+  SiPrisma,
+  SiPostgresql,
+  SiMysql,
+  SiLaravel,
+  SiTypescript,
 } from "react-icons/si";
 import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
@@ -41,6 +46,11 @@ export default function Biography() {
     SiExpress,
     SiPostgresql,
     SiMongodb,
+    SiMongoose,
+    SiPrisma,
+    SiMysql,
+    SiLaravel,
+    SiTypescript,
   ];
 
   return (
@@ -53,7 +63,7 @@ export default function Biography() {
     >
       <div className="hero-overlay bg-opacity-60 text-center"></div>
       <div
-        className="hero-content text-neutral-content w-[80%] h-[80%] flex flex-col justify-center items-center overflow-hidden"
+        className="hero-content text-neutral-content w-[82%] h-[80%] flex flex-col justify-center items-start overflow-hidden"
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.1)",
           borderRadius: "16px",
@@ -63,31 +73,44 @@ export default function Biography() {
           border: "1px solid rgba(255, 255, 255, 0.2)",
         }}
       >
-        <div className="w-[80%] h-[90%] flex flex-col md:flex-row md:gap-4 md:justify-center md:items-center">
-          <div className="bio mb-4 md:w-full flex flex-col justify-center items-center h-full md:h-auto">
-            <section
-              style={{ marginBottom: "50px" }}
-              className="flex flex-col gap-4 overflow-hidden justify-center items-center h-full md:h-auto"
-            >
-              <p className="flex justify-center items-center h-full md:h-auto">
-                <span className="text-5xl mr-2">Hi</span> I'm Agus Setiawan,  a
-                Fullstack Developer with a passion for creating dynamic and
-                responsive web applications.
+        <div className="md:w-[80%] w-[90%] md:h-[90%] h-auto flex flex-col md:flex-row md:gap-4 justify-center items-center overflow-auto text-justify md:text-left">
+          {" "}
+          {/* Ubah di sini */}
+          <div className="bio mb-4 md:w-full flex flex-col justify-center items-center h-full md:h-auto overflow-y-auto">
+            <section className="flex flex-col gap-3 overflow-auto justify-center items-center  md:h-auto">
+              <p className="flex justify-center items-center  md:h-auto  text-gray-300 font-bold ">
+                <span className="text-5xl mr-2">Hi</span> I am a dedicated
+                professional with a diverse background, having transitioned from
+                various roles, including educator, farmer, and street vendor, to
+                a fulfilling career in web development. My journey has been
+                driven by a strong desire to solve problems and create
+                innovative solutions.
               </p>
 
-              <p className="hidden md:block">
-                My toolkit includes HTML, CSS (Bootstrap and TailwindCSS), and
-                JavaScript, along with powerful backend technologies like
-                NodeJS, Express, and PostgreSQL. I'm also skilled in Prisma,
-                Sequelize, and MongoDB for database management, and I bring
-                interactive user experiences to life with Framer-Motion and
-                Daisy UI. On the frontend, I excel with ReactJS and NextJS.
+              <p className="hidden md:block text-gray-300 font-bold">
+                Throughout my experiences, I have cultivated essential skills
+                such as resilience, adaptability, and effective communication,
+                which have been instrumental in my transition to the tech
+                industry. My passion for programming ignited as I began
+                exploring the world of backend development. I have developed a
+                solid foundation in technologies like ExpressJS, focusing on
+                security and efficiency with tools such as JWT, JOI, Bcrypt,
+                Redis, Nodemailer, and Multer.
               </p>
-              <p className="hidden md:block">
-                Over the years, I've worked on a variety of projects ranging
-                from e-commerce platforms to sleek landing pages. My goal is to
-                blend creativity with technical expertise to build solutions
-                that are not only functional but also visually appealing.
+              <p className="hidden md:block text-gray-300 font-bold">
+                In addition to my backend expertise, I am eager to expand my
+                knowledge in TypeScript and NestJS to deepen my understanding of
+                the JavaScript ecosystem. My commitment to continuous learning
+                propels me to seek out new challenges and opportunities within
+                the tech landscape.
+              </p>
+              <p className="hidden md:block text-gray-300 font-bold">
+                I am excited about the potential to contribute to innovative
+                projects that make a difference and am always looking for ways
+                to enhance my skills and grow as a developer. My diverse
+                background provides me with a unique perspective on
+                problem-solving, and I am enthusiastic about bringing this
+                perspective to a collaborative team environment.
               </p>
             </section>
           </div>
@@ -95,9 +118,9 @@ export default function Biography() {
       </div>
 
       {/* infinite tech stack */}
-      <div className="tech-stack md:w-1/8 hidden md:block md:absolute right-0 mr-24">
-        <div className="infinite-scroll h-[80%] overflow-hidden">
-          <div className="icons flex flex-col animate-scroll">
+      <div className="tech-stack md:w-1/8 absolute md:right-0 md:mr-44 -mt-96 overflow-hidden">
+        <div className="infinite-scroll h-[80%] overflow-hidden w-full">
+          <div className="icons flex md:flex-col md:gap-4 animate-scroll">
             {techStackIcons.map((Icon, index) => (
               <div key={index} className="icon mb-4">
                 <Icon className="h-16 w-16" />
@@ -116,11 +139,20 @@ export default function Biography() {
       <style jsx>{`
         .infinite-scroll {
           position: relative;
-          height: 100vh;
+          height: auto;
+          overflow: hidden;
         }
         .animate-scroll {
           animation: scroll 15s linear infinite;
         }
+
+        /* Media query untuk tampilan mobile */
+        @media (max-width: 768px) {
+          .animate-scroll {
+            animation: scroll-x 30s linear infinite;
+          }
+        }
+
         @keyframes scroll {
           from {
             transform: translateY(0);
@@ -129,7 +161,17 @@ export default function Biography() {
             transform: translateY(-50%);
           }
         }
+
+        @keyframes scroll-x {
+          from {
+            transform: translateX(100%); /* Mulai dari kanan */
+          }
+          to {
+            transform: translateX(-100%); /* Berhenti di kiri */
+          }
+        }
       `}</style>
+
       <div className="absolute md:w-1/8 right-2">
         <Drawer />
       </div>

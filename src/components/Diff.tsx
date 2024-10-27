@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Diff() {
   return (
-    <div className="diff md:aspect-[16/9]  md:h-screen">
+    <div className="diff h-full md:h-full md:aspect-[16/9] md:h-screen">
       <div className="diff-item-1">
         <div className="bg-neutral text-success-content grid place-content-center md:text-9xl text-5xl font-black text-center">
           WELCOME TO
