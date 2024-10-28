@@ -16,7 +16,6 @@ import {
 } from "react-icons/ri";
 import { FaMedium } from "react-icons/fa6";
 import {
-  SiFramer,
   SiExpress,
   SiMongodb,
   SiMongoose,
@@ -41,7 +40,6 @@ export default function Biography() {
     FaCss3Alt,
     FaJsSquare,
     RiNextjsFill,
-    SiFramer,
     SiSequelize,
     SiExpress,
     SiPostgresql,
@@ -61,9 +59,9 @@ export default function Biography() {
         backgroundSize: "cover",
       }}
     >
-      <div className="hero-overlay bg-opacity-60 text-center overflow-hidden"></div>
+      <div className="hero-overlay bg-opacity-60 text-center overflow-auto"></div>
       <div
-        className="hero-content text-neutral-content w-[82%] h-[80%] flex flex-col justify-center items-start overflow-hidden"
+        className="hero-content text-neutral-content w-[82%] h-[80%] flex flex-col justify-center items-start overflow-auto"
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.1)",
           borderRadius: "16px",
@@ -73,12 +71,10 @@ export default function Biography() {
           border: "1px solid rgba(255, 255, 255, 0.2)",
         }}
       >
-        <div className="md:w-[80%] w-[90%] md:h-[90%] h-auto flex flex-col md:flex-row md:gap-4 justify-center items-center overflow-auto text-justify md:text-left">
-          {" "}
-          {/* Ubah di sini */}
-          <div className="bio mb-4 md:w-full flex flex-col justify-center items-center h-full md:h-auto overflow-y-auto">
-            <section className="flex flex-col gap-3 overflow-auto justify-center items-center  md:h-auto">
-              <p className="flex justify-center items-center  md:h-auto  text-gray-300 font-bold ">
+        <div className="md:w-[80%] w-[90%] h-[90%] flex flex-col md:flex-row md:gap-4 justify-center items-center text-justify md:text-left">
+          <div className="bio mb-4 md:w-full flex flex-col justify-center items-center h-full">
+            <section className="flex flex-col gap-2 justify-center items-center h-full overflow-auto md:h-auto">
+              <p className="text-gray-300 font-bold">
                 <span className="text-5xl mr-2">Hi</span> I am a dedicated
                 professional with a diverse background, having transitioned from
                 various roles, including educator, farmer, and street vendor, to
@@ -87,16 +83,6 @@ export default function Biography() {
                 innovative solutions.
               </p>
 
-              <p className="hidden md:block text-gray-300 font-bold">
-                Throughout my experiences, I have cultivated essential skills
-                such as resilience, adaptability, and effective communication,
-                which have been instrumental in my transition to the tech
-                industry. My passion for programming ignited as I began
-                exploring the world of backend development. I have developed a
-                solid foundation in technologies like ExpressJS, focusing on
-                security and efficiency with tools such as JWT, JOI, Bcrypt,
-                Redis, Nodemailer, and Multer.
-              </p>
               <p className="hidden md:block text-gray-300 font-bold">
                 In addition to my backend expertise, I am eager to expand my
                 knowledge in TypeScript and NestJS to deepen my understanding of
@@ -107,10 +93,7 @@ export default function Biography() {
               <p className="hidden md:block text-gray-300 font-bold">
                 I am excited about the potential to contribute to innovative
                 projects that make a difference and am always looking for ways
-                to enhance my skills and grow as a developer. My diverse
-                background provides me with a unique perspective on
-                problem-solving, and I am enthusiastic about bringing this
-                perspective to a collaborative team environment.
+                to enhance my skills and grow as a developer.
               </p>
             </section>
           </div>
@@ -118,8 +101,8 @@ export default function Biography() {
       </div>
 
       {/* infinite tech stack */}
-      <div className="tech-stack md:w-1/8 absolute md:right-0 md:mr-44 -mt-96 overflow-hidden">
-        <div className="infinite-scroll h-[80%] overflow-hidden w-full">
+      <div className="tech-stack md:w-1/8 absolute md:right-0 md:mr-44 bottom-0 overflow-hidden">
+        <div className="infinite-scroll h-full max-h-[100vh] w-full overflow-hidden">
           <div className="icons flex md:flex-col md:gap-4 animate-scroll">
             {techStackIcons.map((Icon, index) => (
               <div key={index} className="icon mb-4">
@@ -139,41 +122,40 @@ export default function Biography() {
       <style jsx>{`
         .infinite-scroll {
           position: relative;
-          height: auto;
-          overflow: hidden;
+          height: 100%;
         }
         .animate-scroll {
-          animation: scroll 15s linear infinite;
-          overflow: hidden;
+          animation: scroll 40s linear infinite;
         }
-
-        /* Media query untuk tampilan mobile */
-        @media (max-width: 768px) {
-          .animate-scroll {
-            animation: scroll-x 30s linear infinite;
-          }
-        }
-
         @keyframes scroll {
           from {
-            transform: translateY(0);
+            transform: translateY(100%);
           }
           to {
-            transform: translateY(-50%);
+            transform: translateY(-100%);
           }
         }
 
-        @keyframes scroll-x {
-          from {
-            transform: translateX(100%); /* Mulai dari kanan */
+        /* Media query untuk mengubah animasi pada perangkat mobile */
+        @media (max-width: 768px) {
+          .icons {
+            flex-direction: row;
           }
-          to {
-            transform: translateX(-100%); /* Berhenti di kiri */
+          .animate-scroll {
+            animation: scroll-x 15s linear infinite;
+          }
+          @keyframes scroll-x {
+            from {
+              transform: translateX(100%);
+            }
+            to {
+              transform: translateX(-100%);
+            }
           }
         }
       `}</style>
 
-      <div className="absolute md:w-1/8 right-2">
+      <div className="absolute md:w-1/8 right-14">
         <Drawer />
       </div>
     </div>

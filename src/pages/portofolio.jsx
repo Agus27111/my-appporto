@@ -9,7 +9,7 @@ export default function Portofolio() {
   return (
     <div className="mx-auto h-auto w-screen flex flex-col justify-center align-center">
       {/* button kecil */}
-      <div className="absolute right-2 top-10 z-20 ">
+      <div className="drawer-button fixed right-14 top-10 z-20">
         <Drawer />
       </div>
 
@@ -48,7 +48,7 @@ export default function Portofolio() {
             </text>
           </motion.svg>
           <Link
-            href="/Contact"
+            href="/contact"
             className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
           >
             Hire Me

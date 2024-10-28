@@ -2,7 +2,7 @@ import React from "react";
 
 export default function drawer() {
   return (
-    <div className="drawer">
+    <div className="drawer fixed">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         {/* Page content here */}
@@ -26,13 +26,13 @@ export default function drawer() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href='/biography'>Biography</a>
+            <a href="/biography">Biography</a>
           </li>
           <li>
-            <a href='/portofolio'>Portfolio</a>
+            <a href="/portofolio">Portfolio</a>
           </li>
           <li>
-            <a href='/contact'>Contact Me</a>
+            <a href="/contact">Contact Me</a>
           </li>
         </ul>
       </div>

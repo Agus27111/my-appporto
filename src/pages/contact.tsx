@@ -70,10 +70,10 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div className="absolute right-2 top-10 z-20 ">
+      <div className="absolute right-14 top-10 z-20 ">
         <Drawer />
       </div>
-      <div className="absolute  bottom-0 z-20 ">
+      <div className="absolute bottom-0 z-20 ">
         <Footer />
       </div>
     </div>
