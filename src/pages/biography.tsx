@@ -72,6 +72,11 @@ export default function Biography() {
         }}
       >
         <div className="md:w-[80%] w-[90%] h-[90%] flex flex-col md:flex-row md:gap-4 justify-center items-center text-justify md:text-left">
+          <div className="avatar md:hidden">
+            <div className="ring-base-300 ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+              <img src="/images/agus1.jpg" />
+            </div>
+          </div>
           <div className="bio mb-4 md:w-full flex flex-col justify-center items-center h-full">
             <section className="flex flex-col gap-2 justify-center items-center h-full overflow-auto md:h-auto">
               <p className="text-gray-300 font-bold">
@@ -101,7 +106,7 @@ export default function Biography() {
       </div>
 
       {/* infinite tech stack */}
-      <div className="tech-stack md:w-1/8 absolute md:right-0 md:mr-44 bottom-0 overflow-hidden">
+      <div className="hidden md:block tech-stack md:w-1/8 absolute md:right-0 md:mr-44 bottom-0 overflow-hidden">
         <div className="infinite-scroll h-full max-h-[100vh] w-full overflow-hidden">
           <div className="icons flex md:flex-col md:gap-4 animate-scroll">
             {techStackIcons.map((Icon, index) => (

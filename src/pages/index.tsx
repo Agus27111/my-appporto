@@ -19,7 +19,7 @@ export default function Home() {
     >
       <div className="hero-overlay bg-opacity-60 text-center"></div>
       <div
-        className="hero-content text-neutral-content w-[90%] md:w-[75%] flex-grow flex flex-col justify-center m-auto mt-3"
+        className="hero-content text-neutral-content w-[90%] md:w-[75%] flex-grow flex flex-col justify-center m-auto mt-3 min-h-[90vh] md:min-h-[80vh] "
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.1)",
           borderRadius: "16px",
