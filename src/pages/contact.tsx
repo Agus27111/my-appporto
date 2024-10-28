@@ -73,7 +73,7 @@ export default function Contact() {
       <div className="absolute right-14 top-10 z-20 ">
         <Drawer />
       </div>
-      <div className="absolute bottom-0 z-20 ">
+      <div className="absolute bottom-0 z-20 mt-4">
         <Footer />
       </div>
     </div>

@@ -73,7 +73,7 @@ export default function Biography() {
       >
         <div className="md:w-[80%] w-[90%] h-[90%] flex flex-col md:flex-row md:gap-4 justify-center items-center text-justify md:text-left">
           <div className="avatar md:hidden">
-            <div className="ring-base-300 ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+            <div className="ring-base-alert ring-offset-base-alert w-24 rounded-full ring ring-offset-2">
               <img src="/images/agus1.jpg" />
             </div>
           </div>

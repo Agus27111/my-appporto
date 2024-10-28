@@ -19,7 +19,7 @@ export default function Home() {
     >
       <div className="hero-overlay bg-opacity-60 text-center"></div>
       <div
-        className="hero-content text-neutral-content w-[90%] md:w-[75%] flex-grow flex flex-col justify-center m-auto mt-3 min-h-[90vh] md:min-h-[80vh] "
+        className="hero-content text-neutral-content w-[90%] md:w-[75%] flex-grow flex flex-col justify-center items-center m-auto mt-3 min-h-[90vh] md:min-h-[80vh] "
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.1)",
           borderRadius: "16px",
@@ -79,7 +79,7 @@ export default function Home() {
                 <div className="border-zinc-500 border-2 w-full h-[2px] mt-4 rounded-[5px]" />
                 <Link href={`/${e.toLowerCase()}`}>
                   {" "}
-                  <p className="mt-2 cursor-pointer hover:text-zinc-200 active:scale-[0.9] ">
+                  <p className="mt-2 cursor-pointer text-black hover:text-zinc-200 active:scale-[0.9] ">
                     {e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()}{" "}
                   </p>
                 </Link>

@@ -41,8 +41,8 @@ export default function Portofolio() {
                 d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
               />
             </defs>
-            <text fill="#000">
-              <textPath xlinkHref="#circlePath" className="text-base">
+            <text fill="#fff">
+              <textPath xlinkHref="#circlePath" className="text-white">
                 BackEnd Developer ExpressJS NestJS TypeScript
               </textPath>
             </text>
